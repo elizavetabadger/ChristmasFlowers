@@ -5,7 +5,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.shape.Circle;
 
-public class HelloController {
+public class ChristmasFlowersController {
     @FXML private TextField daysField;
     @FXML private Label messageLabel;
 
@@ -35,7 +35,7 @@ public class HelloController {
     }
 
     @FXML
-    private void onCalculateClick() {
+    private void calculateOrderTheFlowersAfterDays() {
         final int days;
 
         try {
@@ -47,6 +47,7 @@ public class HelloController {
 
         try {
             flowerView.showOrder(orderService.getOrderAfterDays(days));
+            messageLabel.setText("Через "+days+ " дней цветокчи расставлены так: "+orderService.getOrderLetterCodesAfterDays(days));
         } catch (InvalidDaysException e) {
             messageLabel.setText(e.getMessage());
         }

@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Circle?>
 
 <VBox alignment="CENTER" prefHeight="330" prefWidth="520" spacing="18" xmlns="http://javafx.com/javafx/26"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="ipap.christmasflowers.HelloController">
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="ipap.christmasflowers.ChristmasFlowersController">
 
     <padding>
         <Insets bottom="24" left="24" right="24" top="24"/>
@@ -37,7 +37,7 @@
     <HBox alignment="CENTER" spacing="10">
         <Label text="Сколько уже прошло дней?"/>
         <TextField fx:id="daysField" prefWidth="120" promptText="1,2 или 73"/>
-        <Button onAction="#onCalculateClick" text="Посмотреть цветочки"/>
+        <Button onAction="#calculateOrderTheFlowersAfterDays" text="Посмотреть цветочки"/>
     </HBox>
 
     <Label fx:id="messageLabel" text="Введите число дней" wrapText="true"/>
